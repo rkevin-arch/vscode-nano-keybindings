@@ -2,7 +2,7 @@
 	"name": "nano-keybindings",
 	"displayName": "Nano keybindings",
 	"description": "Nano keybindings for VSCode",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
@@ -10,14 +10,57 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:nano-keybindings.helloWorld"
+		"onCommand:nano-keybindings.cut",
+		"onCommand:nano-keybindings.toggleCutToEnd"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "nano-keybindings.helloWorld",
-				"title": "Hello World"
+				"command": "nano-keybindings.cut",
+				"title": "Cut (nano)"
+			},
+			{
+				"command": "nano-keybindings.toggleCutToEnd",
+				"title": "Toggle Cut to End (nano)"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "nano-keybindings.cut",
+				"key": "ctrl+k"
+			},
+			{
+				"command": "nano-keybindings.toggleCutToEnd",
+				"key": "alt+k"
+			},
+			{
+				"command": "editor.action.clipboardPasteAction",
+				"key": "ctrl+u"
+			},
+			{
+				"command": "actions.find",
+				"key": "ctrl+w"
+			},
+			{
+				"command": "editor.action.startFindReplaceAction",
+				"key": "ctrl+\\"
+			},
+			{
+				"command": "editor.action.nextMatchFindAction",
+				"key": "alt+w"
+			},
+			{
+				"command": "editor.action.previousMatchFindAction",
+				"key": "alt+q"
+			},
+			{
+				"command": "workbench.action.gotoLine",
+				"key": "ctrl+shift+_"
+			},
+			{
+				"command": "workbench.action.closeWindow",
+				"key": "ctrl+x"
 			}
 		]
 	},
