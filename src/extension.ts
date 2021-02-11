@@ -36,7 +36,6 @@ async function cut(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) {
 	// else it should match our current line anyway
 	let range = new vscode.Range(textEditor.selection.active.line, 0, textEditor.selection.active.line + 1, 0);
     let text = textEditor.document.getText(range);
-	vscode.window.showInformationMessage(cutLine.toString() + (cutTextEditor === textEditor ? "true" : "false"));
 	if (cutLine === textEditor.selection.active.line && cutTextEditor === textEditor) {
 		await vscode.env.clipboard.readText().then((str) => {
 			text = str + text;
@@ -68,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
 	for (let key in commands) {
 		context.subscriptions.push(vscode.commands.registerTextEditorCommand('nano-keybindings.'+key, commands[key]));
 	}
-	vscode.workspace.onDidChangeTextDocument(() => {cutLine = -1; vscode.window.showInformationMessage("Reset");});
+	vscode.workspace.onDidChangeTextDocument(() => {cutLine = -1;});
 }
 
 // this method is called when your extension is deactivated

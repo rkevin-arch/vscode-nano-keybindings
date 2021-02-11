@@ -3,7 +3,7 @@
 	"displayName": "Nano keybindings",
 	"description": "Nano keybindings for VSCode",
 	"repository": "https://github.com/rkevin-arch/vscode-nano-keybindings",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "rkevin",
 	"engines": {
 		"vscode": "^1.53.0"
@@ -61,7 +61,7 @@
 				"key": "ctrl+shift+_"
 			},
 			{
-				"command": "workbench.action.closeWindow",
+				"command": "workbench.action.closeActiveEditor",
 				"key": "ctrl+x"
 			}
 		]

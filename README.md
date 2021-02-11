@@ -2,7 +2,7 @@
 
 This is a VS Code extension that lets you use keybindings from GNU nano.
 
-Note that this is a personal project used by me. This extension may be buggy. in case it destroys your project or clipboard contents accidentally, please do submit a bug report, but I'm not liable for any of the damage caused. Use at your own risk.
+Note that this is a personal project used by me. This extension may be buggy. In case it destroys your project or clipboard contents accidentally, please do submit a bug report, but I'm not liable for any of the damage caused. Use at your own risk.
 
 ## Features
 
@@ -27,6 +27,10 @@ It also adds the following keybindings for default actions:
 The feature I needed the most was cut and paste, so I haven't implemented any of the other features yet. If you would like to see a feature added, please let me know! (or better yet, make a PR).
 
 ## Release Notes
+
+### 0.1.1
+
+Bugfix: typos in README, `ctrl+x` closes entire editor instead of file, and removed debug output from extension.
 
 ### 0.1.0
 
